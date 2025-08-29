@@ -1,0 +1,145 @@
+.head {
+    min-height: 250px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.head .content {
+    width: var(--max-width);
+    margin: 0 auto;
+}
+.head .content p {
+    padding: 5px 0 20px 0;
+}
+/* head  */
+
+.tabs .content {
+    position: relative;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: var(--max-width);
+}
+.tabs .content::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: var(--lines-color);
+    height: 2px;
+    width: 25%;
+    transition: 0.5s ease left, 0.5s background;
+}
+.tabs .content.active::before {
+    left: 25%;
+    transition: 0.5s ease left, 0.5s background;
+}
+.tabs .content.active1::before {
+    left: 50%;
+    transition: 0.5s ease left, 0.5s background;
+}
+.tabs .content.active2::before {
+    left: 75%;
+    transition: 0.5s ease left, 0.5s background;
+}
+.tabs .content li {
+    height: 100%;
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.2;
+    transition: 0.5s ease opacity;
+}
+.tabs .content li.active {
+    opacity: 1;
+    transition: 0.5s ease opacity;
+}
+/* tabs  */
+
+.container {
+    margin: 20px auto 50px auto;
+    overflow-x: hidden;
+}
+.container ul.tile {
+    height: 50px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 70px 400px 1fr 1fr 1fr;
+    border: 1px solid var(--lines-color);
+    border-radius: var(--border-radius);
+    transition: 0.5s background, 0.5s color, 0.5s border;
+}
+.container ul.tile li {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: var(--lines-color);
+    transition: 0.5s background, 0.5s color, 0.5s border;
+}
+.container ul.tile li:nth-child(1) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container ul.profiles li {
+    margin: 20px 0;
+    height: 70px;
+    color: var(--text-color);
+    border-radius: var(--border-radius);
+    background: var(--card-background);
+    transition: 0.5s background, 0.5s color;
+}
+.container ul.profiles li ul {
+    cursor: pointer;
+    overflow: hidden;
+    height: 100%;
+    transition: 0.5s background, 0.5s color;
+    border: none;
+}
+.container ul.profiles li ul li {
+    margin: 0;
+    border-radius: 0;
+    transition: 0.5s background, 0.5s color, 0.5s ease scale;
+}
+.container ul.profiles li ul li:hover {
+    scale: 0.95;
+}
+.container ul.profiles li ul li img {
+    height: auto;
+    width: 50px;
+    margin: 0 10px 0 0;
+}
+.container ul.profiles li ul li span {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 1000px;
+    background: var(--background-color);
+    transition: 0.5s background, 0.5s color;
+}
+.container ul.profiles li ul li:nth-child(3) {
+    color: #20a24f;
+}
+
+.container section {
+    visibility: hidden;
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    top: 0;
+    transition: opacity 0.5s ease-in-out;
+    overflow: hidden;
+}
+.container section.activeee {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    transition: opacity 0.5s ease-in-out;
+}

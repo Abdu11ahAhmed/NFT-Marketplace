@@ -1,0 +1,402 @@
+.sec1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.sec1 .text h1 {
+    font-size: 55px;
+}
+.sec1 .text p {
+    padding: 20px 0;
+}
+.sec1 .text a {
+    position: relative;
+    padding: 13px 17px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 170px;
+    background: var(--accent-color);
+    border-radius: var(--border-radius);
+    border: 2px solid var(--accent-color);
+    color: white;
+    transition: 0.5s scale, 0.5s background, 1s color;
+}
+.sec1 .text a:hover {
+    scale: 0.95;
+    background: transparent;
+    color: var(--accent-color);
+}
+.sec1 .text a svg path {
+    fill: #fff;
+    transition: 1s fill;
+}
+.sec1 .text a:hover svg path {
+    fill: var(--accent-color);
+}
+.sec1 .text ul {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 20px 0;
+}
+.sec1 .text ul li {
+    margin: 0 50px 0 0;
+}
+.sec1 .text ul li h3 {
+    font-size: 20px;
+}
+.sec1 .text ul li p {
+    padding: 0;
+    font-size: 18px;
+}
+.sec1 .image {
+    display: flex;
+    align-items: center;
+}
+.sec1 .image .img-content {
+    border: 10px solid var(--background-color);
+    box-shadow: var(--box-shadow);
+    border-radius: 30px;
+}
+.sec1 .image img {
+    height: auto;
+    width: 100%;
+    border-radius: var(--border-radius);
+}
+/* section 1 */
+
+.sec2 .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+}
+.sec2 .content .card {
+    width: 100%;
+}
+.sec2 .content .card .images .main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.sec2 .content .card .images .main img {
+    width: 100%;
+}
+.sec2 .content img,
+.sec2 .content span {
+    transition: 0.5s ease scale, 0.5s background;
+    cursor: pointer;
+}
+.sec2 .content img:hover,
+.sec2 .content span:hover {
+    scale: 0.95;
+}
+.sec2 .content .card .images .second {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px 0;
+}
+.sec2 .content .card .images .second img {
+    height: auto;
+    width: 95%;
+    border-radius: var(--border-radius);
+}
+.sec2 .content .card .images .second span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    background: var(--accent-color);
+    color: white;
+}
+.sec2 .content .card .text {
+    height: 100px;
+    padding: 20px;
+}
+.sec2 .content .card .text p {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 10px 0;
+    font-size: 12px;
+}
+.sec2 .content .card .text img {
+    height: 25px;
+    width: 25px;
+    margin: 0 10px 0 0;
+}
+/* section 2 */
+
+.sec3 .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.sec3 .content .card {
+    height: 220px;
+    border-radius: var(--border-radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: var(--card-background);
+    transition: 0.5s ease scale, 0.5s background;
+    cursor: pointer;
+    text-align: center;
+}
+.sec3 .content .card:hover {
+    scale: 0.95;
+}
+.sec3 .content .card .text {
+    margin: 10px 0 0 0;
+}
+.sec3 .content .card p {
+    font-size: 14px;
+    color: var(--p-color);
+}
+.sec3 .content .card span {
+    color: #929292;
+}
+.sec3 .content .card img {
+    height: 120px;
+    width: 120px;
+    border-radius: 10000px;
+}
+/* section3 */
+
+.sec4 .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+}
+.sec4 .content .card {
+    height: 250px;
+    border-radius: var(--border-radius);
+    background: var(--card-background);
+    overflow: hidden;
+    transition: 0.5s ease scale, 0.5s background;
+    cursor: pointer;
+    display: grid;
+    grid-template-rows: 1fr 70px;
+}
+.sec4 .content .card:hover {
+    scale: 0.95;
+}
+.sec4 .content .card .images {
+    position: relative;
+    overflow: hidden;
+}
+.sec4 .content .card .images img {
+    width: 100%;
+    object-fit: cover;
+}
+.sec4 .content .card .images .blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    backdrop-filter: blur(20px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sec4 .content .card .images .blur img {
+    height: 90px;
+    width: 90px;
+}
+.sec4 .content .card .text {
+    padding: 20px;
+}
+/* section 4  */
+
+.sec5 .content {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.sec5 .content .card {
+    height: 450px;
+    border-radius: var(--border-radius);
+    display: grid;
+    grid-template-rows: 1fr 155px;
+    background: var(--card-background);
+    cursor: pointer;
+    overflow: hidden;
+    transition: 0.5s scale;
+}
+.sec5 .content .card:hover {
+    scale: 0.95;
+}
+.sec5 .content .card .image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+.sec5 .content .card .image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.sec5 .content .card .text {
+    padding: 20px;
+    overflow: hidden;
+}
+.sec5 .content .card .text p {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 14px;
+    padding: 5px 0;
+}
+.sec5 .content .card .text p img {
+    height: 25px;
+    width: 25px;
+    margin: 0 10px 0 0;
+}
+.sec5 .content .card .text ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.sec5 .content .card .text ul span {
+    font-size: 12px;
+    color: #929292;
+}
+.sec5 .content .card .text ul p {
+    padding: 5px 0 0 0;
+}
+/* section 5 */
+
+.sec6 .content {
+    min-height: 380px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.sec6 .content .card {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    flex-direction: column;
+    transition: 0.5s ease scale, 0.5s background;
+}
+.sec6 .content .card img {
+    height: 200px;
+    width: 200px;
+}
+.sec6 .content .card .text {
+    text-align: center;
+}
+.sec6 .content .card .text h3 {
+    padding: 10px 0;
+}
+/* section 6 */
+
+.sec7 {
+    min-height: 400px;
+    border-radius: var(--border-radius);
+    background: var(--card-background);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 50px;
+    transition: 0.5s ease scale, 0.5s background;
+}
+.sec7 .image img {
+    height: 100%;
+    width: 100%;
+    border-radius: 20px;
+}
+.sec7 .text {
+    padding: 0 20px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+}
+.sec7 .text p {
+    padding: 20px 0;
+}
+.sec7 .text form {
+    position: relative;
+    width: 80%;
+}
+.sec7 .text form input {
+    border: none;
+    padding: 0 20px;
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    z-index: -1;
+    color: black;
+}
+.sec7 .text form button {
+    position: absolute;
+    right: -2px;
+    border: none;
+    background: var(--p-color);
+    padding: 0 15px;
+    height: 40px;
+    background: var(--accent-color);
+    color: white;
+    border-radius: 0 10px 10px 0;
+}
+
+@media screen and (max-width: 1060px) {
+    .sec1 {
+        min-height: 429px;
+    }
+    .sec1 .text h1 {
+        font-size: 45px;
+    }
+    .sec1 .text a {
+        padding: 11px 17px;
+        width: 150px;
+        font-size: 14px;
+    }
+    /* sec1  */
+
+    .sec2 .content {
+        min-height: 480px;
+    }
+    /* sec2  */
+
+    .sec3 .content .card {
+        height: 200px;
+    }
+    .sec3 .content .card img {
+        height: 100px;
+        width: 100px;
+    }
+    /* sec3  */
+
+    .sec4 .content .card {
+        height: 225px;
+    }
+    /* sec4  */
+
+    .sec5 .content .card {
+        height: 400px;
+    }
+    /* sec5  */
+
+    /* .sec6 .content {
+        min-height: 380px;
+    } */
+    p {
+        color: var(--p-color);
+        font-size: 14px;
+    }
+    /* sec6  */
+    /* sec6  */
+}

@@ -1,0 +1,56 @@
+.container{
+    min-height: calc(100vh - 100px - 400px);
+}
+section{
+    position: relative;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+section .image{
+    height: 500px;
+    width: 500px;
+}
+section .image img{
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+section .text{
+    height: 500px;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+section .text p{
+    padding: 10px 0;
+}
+section .text li{
+    padding: 14px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    border: 1px solid var(--accent-color); 
+    background: #dddddd1f;  
+    margin: 10px 0;
+}
+form input{
+    display: block;
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 1px solid var(--card-background);
+    outline: none;
+}
+form button{
+    padding: 10px 20px;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background: var(--accent-color);
+}

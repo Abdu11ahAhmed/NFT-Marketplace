@@ -1,0 +1,743 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="description"
+            content="Browse through more than 50k NFTs on the NFT Marketplace."
+        />
+        <link
+            rel="shortcut icon"
+            href="./images/icons/logo.svg"
+            type="image/x-icon"
+        />
+        <!-- styles -->
+        <link rel="stylesheet" href="./styles/base.css" />
+        <link rel="stylesheet" href="./styles/marketplace.css" />
+        <!-- styles -->
+        <title>NFT Market | Home Page</title>
+    </head>
+    <body>
+        <div class="switcher">
+            <div class="activate"></div>
+
+            <div class="night">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="ionicon"
+                    viewBox="0 0 512 512"
+                >
+                    <path
+                        d="M160 136c0-30.62 4.51-61.61 16-88C99.57 81.27 48 159.32 48 248c0 119.29 96.71 216 216 216 88.68 0 166.73-51.57 200-128-26.39 11.49-57.38 16-88 16-119.29 0-216-96.71-216-216z"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="32"
+                    />
+                </svg>
+            </div>
+            <div class="light">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="ionicon"
+                    viewBox="0 0 512 512"
+                >
+                    <path
+                        fill="#0000"
+                        stroke="#fff"
+                        stroke-linecap="round"
+                        stroke-miterlimit="10"
+                        stroke-width="32"
+                        d="M256 48v48M256 416v48M403.08 108.92l-33.94 33.94M142.86 369.14l-33.94 33.94M464 256h-48M96 256H48M403.08 403.08l-33.94-33.94M142.86 142.86l-33.94-33.94"
+                    />
+                    <circle
+                        cx="256"
+                        cy="256"
+                        r="80"
+                        fill="#0000"
+                        stroke="#fff"
+                        stroke-linecap="round"
+                        stroke-miterlimit="10"
+                        stroke-width="32"
+                    />
+                </svg>
+            </div>
+        </div>
+
+        <!-- navigation bar -->
+        <nav>
+            <a href="./index.html" class="logo">
+                <img src="./images/icons/logo.svg" alt="logo" />
+                NFT Marketplace
+            </a>
+            <ul class="nav-links">
+                <li><a>Marketplace</a></li>
+                <li><a href="./ranking.html">Rankings</a></li>
+                <li><a href="./connect-to-wallet.html">Connect a wallet</a></li>
+                <li>
+                    <a href="./register/index.html">
+                        <svg
+                            width="20"
+                            height="20"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M10 3.125C7.58375 3.125 5.625 5.08375 5.625 7.5C5.625 9.91625 7.58375 11.875 10 11.875C12.4162 11.875 14.375 9.91625 14.375 7.5C14.375 5.08375 12.4162 3.125 10 3.125ZM4.375 7.5C4.375 4.3934 6.8934 1.875 10 1.875C13.1066 1.875 15.625 4.3934 15.625 7.5C15.625 10.6066 13.1066 13.125 10 13.125C6.8934 13.125 4.375 10.6066 4.375 7.5Z"
+                                fill="white"
+                            />
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M10.0001 13.124C8.57374 13.124 7.17251 13.4995 5.93728 14.2128C4.70205 14.926 3.67634 15.9518 2.96327 17.1872C2.79071 17.4861 2.40848 17.5886 2.10953 17.416C1.81058 17.2435 1.70812 16.8612 1.88068 16.5623C2.70345 15.1369 3.88696 13.9532 5.31223 13.1303C6.7375 12.3073 8.3543 11.874 10.0001 11.874C11.6459 11.874 13.2627 12.3073 14.688 13.1303C16.1132 13.9532 17.2968 15.1369 18.1195 16.5623C18.2921 16.8612 18.1896 17.2435 17.8907 17.416C17.5917 17.5886 17.2095 17.4861 17.0369 17.1872C16.3239 15.9518 15.2982 14.926 14.0629 14.2128C12.8277 13.4995 11.4265 13.124 10.0001 13.124Z"
+                                fill="white"
+                            />
+                        </svg>
+                        Sign Up
+                    </a>
+                </li>
+            </ul>
+            <div class="humberger">
+                <div class="line"></div>
+            </div>
+        </nav>
+        <!-- navigation bar -->
+
+        <!-- head -->
+        <div class="head">
+            <div class="content">
+                <h1>Browse Marketplace</h1>
+                <p>Browse through more than 50k NFTs on the NFT Marketplace.</p>
+                <form action="">
+                    <input
+                        id="searchMarket"
+                        type="text"
+                        placeholder="Search your favorate NFTs"
+                    />
+                    <button>
+                        <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M10.875 3.75C6.93997 3.75 3.75 6.93997 3.75 10.875C3.75 14.81 6.93997 18 10.875 18C14.81 18 18 14.81 18 10.875C18 6.93997 14.81 3.75 10.875 3.75ZM2.25 10.875C2.25 6.11154 6.11154 2.25 10.875 2.25C15.6385 2.25 19.5 6.11154 19.5 10.875C19.5 15.6385 15.6385 19.5 10.875 19.5C6.11154 19.5 2.25 15.6385 2.25 10.875Z"
+                                fill="white"
+                            />
+                            <path
+                                fill-rule="evenodd"
+                                clip-rule="evenodd"
+                                d="M15.913 15.913C16.2059 15.6201 16.6808 15.6201 16.9737 15.913L21.5299 20.4693C21.8228 20.7622 21.8228 21.237 21.5299 21.5299C21.237 21.8228 20.7622 21.8228 20.4693 21.5299L15.913 16.9737C15.6201 16.6808 15.6201 16.2059 15.913 15.913Z"
+                                fill="white"
+                            />
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+        <hr />
+        <!-- head -->
+
+        <!-- tabs -->
+        <div class="tabs">
+            <ul class="content">
+                <li id="nfts" class="nfts active" data-cont=".nfts-content">
+                    <p>NFTs</p>
+                </li>
+                <li
+                    id="collections"
+                    class="collections"
+                    data-cont=".collections-content"
+                >
+                    <p>Collections</p>
+                </li>
+            </ul>
+        </div>
+        <!-- tabs -->
+
+        <!-- container -->
+        <div class="allContainer">
+            <div class="container">
+                <section class="nfts-content active">
+                    <div class="content">
+                        <div class="card">
+                            <div class="image">
+                                <img src="./images/marketplace/1.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>Distant Galaxy</h4>
+                                <p>
+                                    <img
+                                        src="./images/avatars/avatar-placeholder-108@2x.png"
+                                        alt=""
+                                    />
+                                    user name
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span>Price</span>
+                                        <p>1.63 ETH</p>
+                                    </li>
+                                    <li>
+                                        <span>Highest Bid</span>
+                                        <p>0.33 wETH</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="./images/marketplace/2.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>Distant Galaxy</h4>
+                                <p>
+                                    <img
+                                        src="./images/avatars/avatar-placeholder-103@2x.png"
+                                        alt=""
+                                    />
+                                    user name
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span>Price</span>
+                                        <p>1.63 ETH</p>
+                                    </li>
+                                    <li>
+                                        <span>Highest Bid</span>
+                                        <p>0.33 wETH</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="./images/marketplace/3.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>Distant Galaxy</h4>
+                                <p>
+                                    <img
+                                        src="./images/avatars/avatar-placeholder-101@2x.png"
+                                        alt=""
+                                    />
+                                    user name
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span>Price</span>
+                                        <p>1.63 ETH</p>
+                                    </li>
+                                    <li>
+                                        <span>Highest Bid</span>
+                                        <p>0.33 wETH</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="./images/marketplace/4.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>Distant Galaxy</h4>
+                                <p>
+                                    <img
+                                        src="./images/avatars/avatar-placeholder-108@2x.png"
+                                        alt=""
+                                    />
+                                    user name
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span>Price</span>
+                                        <p>1.63 ETH</p>
+                                    </li>
+                                    <li>
+                                        <span>Highest Bid</span>
+                                        <p>0.33 wETH</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="./images/marketplace/5.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>Distant Galaxy</h4>
+                                <p>
+                                    <img
+                                        src="./images/avatars/avatar-placeholder-103@2x.png"
+                                        alt=""
+                                    />
+                                    user name
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span>Price</span>
+                                        <p>1.63 ETH</p>
+                                    </li>
+                                    <li>
+                                        <span>Highest Bid</span>
+                                        <p>0.33 wETH</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="./images/marketplace/6.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>Distant Galaxy</h4>
+                                <p>
+                                    <img
+                                        src="./images/avatars/avatar-placeholder-101@2x.png"
+                                        alt=""
+                                    />
+                                    user name
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span>Price</span>
+                                        <p>1.63 ETH</p>
+                                    </li>
+                                    <li>
+                                        <span>Highest Bid</span>
+                                        <p>0.33 wETH</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="./images/marketplace/7.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>Distant Galaxy</h4>
+                                <p>
+                                    <img
+                                        src="./images/avatars/avatar-placeholder-108@2x.png"
+                                        alt=""
+                                    />
+                                    user name
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span>Price</span>
+                                        <p>1.63 ETH</p>
+                                    </li>
+                                    <li>
+                                        <span>Highest Bid</span>
+                                        <p>0.33 wETH</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="./images/marketplace/8.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>Distant Galaxy</h4>
+                                <p>
+                                    <img
+                                        src="./images/avatars/avatar-placeholder-103@2x.png"
+                                        alt=""
+                                    />
+                                    user name
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span>Price</span>
+                                        <p>1.63 ETH</p>
+                                    </li>
+                                    <li>
+                                        <span>Highest Bid</span>
+                                        <p>0.33 wETH</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="./images/marketplace/9.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>Distant Galaxy</h4>
+                                <p>
+                                    <img
+                                        src="./images/avatars/avatar-placeholder-101@2x.png"
+                                        alt=""
+                                    />
+                                    user name
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span>Price</span>
+                                        <p>1.63 ETH</p>
+                                    </li>
+                                    <li>
+                                        <span>Highest Bid</span>
+                                        <p>0.33 wETH</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="./images/marketplace/10.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>Distant Galaxy</h4>
+                                <p>
+                                    <img
+                                        src="./images/avatars/avatar-placeholder-101@2x.png"
+                                        alt=""
+                                    />
+                                    user name
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span>Price</span>
+                                        <p>1.63 ETH</p>
+                                    </li>
+                                    <li>
+                                        <span>Highest Bid</span>
+                                        <p>0.33 wETH</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="./images/marketplace/11.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>Distant Galaxy</h4>
+                                <p>
+                                    <img
+                                        src="./images/avatars/avatar-placeholder-101@2x.png"
+                                        alt=""
+                                    />
+                                    user name
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span>Price</span>
+                                        <p>1.63 ETH</p>
+                                    </li>
+                                    <li>
+                                        <span>Highest Bid</span>
+                                        <p>0.33 wETH</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="./images/marketplace/12.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>Distant Galaxy</h4>
+                                <p>
+                                    <img
+                                        src="./images/avatars/avatar-placeholder-101@2x.png"
+                                        alt=""
+                                    />
+                                    user name
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span>Price</span>
+                                        <p>1.63 ETH</p>
+                                    </li>
+                                    <li>
+                                        <span>Highest Bid</span>
+                                        <p>0.33 wETH</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="./images/marketplace/2.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>Distant Galaxy</h4>
+                                <p>
+                                    <img
+                                        src="./images/avatars/avatar-placeholder-103@2x.png"
+                                        alt=""
+                                    />
+                                    user name
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span>Price</span>
+                                        <p>1.63 ETH</p>
+                                    </li>
+                                    <li>
+                                        <span>Highest Bid</span>
+                                        <p>0.33 wETH</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="./images/marketplace/3.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>Distant Galaxy</h4>
+                                <p>
+                                    <img
+                                        src="./images/avatars/avatar-placeholder-101@2x.png"
+                                        alt=""
+                                    />
+                                    user name
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span>Price</span>
+                                        <p>1.63 ETH</p>
+                                    </li>
+                                    <li>
+                                        <span>Highest Bid</span>
+                                        <p>0.33 wETH</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="image">
+                                <img src="./images/marketplace/4.png" alt="" />
+                            </div>
+                            <div class="text">
+                                <h4>Distant Galaxy</h4>
+                                <p>
+                                    <img
+                                        src="./images/avatars/avatar-placeholder-108@2x.png"
+                                        alt=""
+                                    />
+                                    user name
+                                </p>
+                                <ul>
+                                    <li>
+                                        <span>Price</span>
+                                        <p>1.63 ETH</p>
+                                    </li>
+                                    <li>
+                                        <span>Highest Bid</span>
+                                        <p>0.33 wETH</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="collections-content">
+                    <div class="content">
+                        <div class="card">
+                            <img
+                                src="./images/avatars/avatar-placeholder-98@2x.png"
+                                alt=""
+                            />
+                            <div class="text">
+                                <h4>Keepitreal</h4>
+                                <p><span>Total Sales: </span>34.53 ETH</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img
+                                src="./images/avatars/avatar-placeholder-99@2x.png"
+                                alt=""
+                            />
+                            <div class="text">
+                                <h4>Keepitreal</h4>
+                                <p><span>Total Sales: </span>34.53 ETH</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img
+                                src="./images/avatars/avatar-placeholder-100@2x.png"
+                                alt=""
+                            />
+                            <div class="text">
+                                <h4>Keepitreal</h4>
+                                <p><span>Total Sales: </span>34.53 ETH</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img
+                                src="./images/avatars/avatar-placeholder-101@2x.png"
+                                alt=""
+                            />
+                            <div class="text">
+                                <h4>Keepitreal</h4>
+                                <p><span>Total Sales: </span>34.53 ETH</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img
+                                src="./images/avatars/avatar-placeholder-102@2x.png"
+                                alt=""
+                            />
+                            <div class="text">
+                                <h4>Keepitreal</h4>
+                                <p><span>Total Sales: </span>34.53 ETH</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img
+                                src="./images/avatars/avatar-placeholder-1@2x.png"
+                                alt=""
+                            />
+                            <div class="text">
+                                <h4>Keepitreal</h4>
+                                <p><span>Total Sales: </span>34.53 ETH</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img
+                                src="./images/avatars/avatar-placeholder-103@2x.png"
+                                alt=""
+                            />
+                            <div class="text">
+                                <h4>Keepitreal</h4>
+                                <p><span>Total Sales: </span>34.53 ETH</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img
+                                src="./images/avatars/avatar-placeholder-104@2x.png"
+                                alt=""
+                            />
+                            <div class="text">
+                                <h4>Keepitreal</h4>
+                                <p><span>Total Sales: </span>34.53 ETH</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img
+                                src="./images/avatars/avatar-placeholder-105@2x.png"
+                                alt=""
+                            />
+                            <div class="text">
+                                <h4>Keepitreal</h4>
+                                <p><span>Total Sales: </span>34.53 ETH</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img
+                                src="./images/avatars/avatar-placeholder-106@2x.png"
+                                alt=""
+                            />
+                            <div class="text">
+                                <h4>Keepitreal</h4>
+                                <p><span>Total Sales: </span>34.53 ETH</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img
+                                src="./images/avatars/avatar-placeholder-107@2x.png"
+                                alt=""
+                            />
+                            <div class="text">
+                                <h4>Keepitreal</h4>
+                                <p><span>Total Sales: </span>34.53 ETH</p>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <img
+                                src="./images/avatars/avatar-placeholder-108@2x.png"
+                                alt=""
+                            />
+                            <div class="text">
+                                <h4>Keepitreal</h4>
+                                <p><span>Total Sales: </span>34.53 ETH</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- collections content -->
+            </div>
+        </div>
+        <hr />
+        <!-- container -->
+
+        <!-- footer -->
+        <footer>
+            <div class="content">
+                <div class="upper">
+                    <ul>
+                        <li>
+                            <a href="./index.html" class="logo">
+                                <img src="./images/icons/logo.svg" alt="logo" />
+                                NFT Marketplace
+                            </a>
+                        </li>
+                        <li>
+                            <p>
+                                NFT marketplace UI created <br />
+                                with Anima for Figma.
+                            </p>
+                        </li>
+                        <li>
+                            <p>Join our community</p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h4>Explore</h4>
+                        </li>
+                        <li><a>Marketplace</a></li>
+                        <li><a href="#">Rankings</a></li>
+                        <li><a href="#">Connect a wallet </a></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h4>Join Our Weekly Digest</h4>
+                        </li>
+                        <li>
+                            <p>
+                                Get exclusive promotions & updates <br />
+                                straight to your inbox.
+                            </p>
+                        </li>
+                        <li>
+                            <form action="">
+                                <input
+                                    id="Subscribe"
+                                    type="email"
+                                    placeholder="Enter your email here"
+                                />
+                                <button>Subscribe</button>
+                            </form>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lower">
+                    <div>&copy;</div>
+                    <span>NFT Market. Use thia template freely.</span>
+                </div>
+            </div>
+        </footer>
+        <!-- footer -->
+
+        <!-- scripts -->
+        <script src="./javascript/main.js"></script>
+        <script src="./javascript/marketplace.js"></script>
+        <!-- scripts -->
+    </body>
+</html>

@@ -1,0 +1,467 @@
+/* Basecs */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: var(--text-color);
+    text-transform: capitalize;
+    font-family: averta;
+    outline: none;
+    transition: 1s ease background;
+}
+body.night {
+    --background-color: #2b2b2b;
+    --accent-color: #a259ff;
+    --text-color: #ffffff;
+    --p-color: #e7e7e7;
+    --p-size: 18px;
+    --max-width: 1000px;
+    --box-shadow: 0 0 20px #212121;
+    --border-radius: 15px;
+    --card-background: #333333;
+    --lines-color: #787878;
+    /*  */
+    background: var(--background-color);
+    transition: 0.5s ease background;
+    /*  */
+}
+body.light {
+    --background-color: #ffffff;
+    --accent-color: #a259ff;
+    --text-color: #000000;
+    --p-color: #333333;
+    --p-size: 18px;
+    --max-width: 1000px;
+    --box-shadow: 0 0 20px #212121;
+    --border-radius: 15px;
+    --card-background: #f0f0f0;
+    --lines-color: #ddd;
+    /*  */
+    background: var(--background-color);
+    transition: 0.5s ease background;
+    /*  */
+}
+body::before {
+    content: "";
+    position: fixed;
+    left: -180px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 100%;
+    border-radius: 100%;
+    background: linear-gradient(
+        to bottom,
+        var(--accent-color),
+        #9e5734,
+        #00ebe4,
+        #dc2982
+    );
+    filter: blur(50px);
+    z-index: 1;
+    opacity: 0.5;
+}
+body::after {
+    content: "";
+    position: fixed;
+    right: -180px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 200px;
+    height: 100%;
+    border-radius: 100%;
+    background: linear-gradient(
+        to bottom,
+        #00ebe4,
+        var(--accent-color),
+        #dc2982,
+        #9e5734
+    );
+    filter: blur(50px);
+    z-index: 0;
+    opacity: 0.5;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+b,
+span,
+input {
+    transition: 1s ease color;
+}
+p {
+    color: var(--p-color);
+    font-size: var(--p-size);
+}
+@font-face {
+    font-family: "averta";
+    src: url(../fonts/AvertaRegular.ttf);
+}
+/* Basecs */
+
+/* Night and light mode */
+.switcher {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 23px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 0 0 12px 12px;
+    border-bottom: 2px solid var(--accent-color);
+    border-left: 2px solid var(--accent-color);
+    border-right: 2px solid var(--accent-color);
+    background: var(--background-color);
+    transition: 0.5s background;
+    z-index: 1;
+    overflow: hidden;
+}
+.switcher .activate {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    background: var(--accent-color);
+    z-index: -1;
+    transition: 0.5s ease left;
+    border: none;
+}
+.switcher .light,
+.switcher .night {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.switcher .light {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.switcher .light svg,
+.switcher .night svg {
+    height: 17px;
+    width: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+body.night .switcher .light svg path,
+body.night .switcher .light svg circle {
+    stroke: var(--accent-color);
+    transition: 0.5s stroke, 0.5s fill;
+}
+body.light .switcher .night svg path,
+body.light .switcher .night svg circle {
+    stroke: var(--accent-color);
+    transition: 0.5s stroke, 0.5s fill;
+}
+/* Night and light mode */
+
+/* Container  */
+.container {
+    min-height: calc(100vh - 100px - 300px);
+    width: var(--max-width);
+    margin: 50px auto;
+    padding: 0 20px;
+    transition: 0.5s ease scale, 0.5s background;
+}
+.container section {
+    width: 100%;
+    margin: 0 0 100px 0;
+}
+/* Container  */
+
+/* Header */
+body.light .container header,
+body.night .container header {
+    transition: 0.5s ease background;
+}
+header {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header a {
+    border: 2px solid var(--accent-color);
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: var(--border-radius);
+    color: var(--accent-color);
+    transition: 1s color, 0.5s background, 0.5s scale;
+}
+header a:hover {
+    color: white;
+    background: var(--accent-color);
+    scale: 0.95;
+}
+header a svg {
+    margin: 2px 10px 0 0;
+    transition: 1s fill;
+}
+header a svg path {
+    transition: 1s fill;
+}
+header a:hover svg path {
+    fill: white;
+}
+/* Header */
+
+/* Navigation bar */
+nav {
+    height: 100px;
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+nav .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav .logo img {
+    height: 25px;
+    width: 25px;
+    margin: 0 10px 0 0;
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav ul li a {
+    padding: 8px 14px;
+}
+nav ul li:nth-child(4) a {
+    background: var(--accent-color);
+    border-radius: var(--border-radius);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    border: 2px solid var(--accent-color);
+    transition: 0.5s scale, 0.5s background, 1s color;
+}
+nav ul li:nth-child(4) a:hover {
+    scale: 0.95;
+    background: transparent;
+    color: var(--accent-color);
+}
+nav ul li:nth-child(4) a svg {
+    height: 20px;
+    width: 20px;
+    margin: 0 10px 0 0;
+}
+nav ul li:nth-child(4) a svg path {
+    transition: 1s fill;
+}
+nav ul li:nth-child(4) a:hover svg path {
+    fill: var(--accent-color);
+}
+nav ul li button {
+    position: relative;
+    margin: 0 0 0 10px;
+    border: 1px solid var(--text-color);
+    height: 30px;
+    width: 30px;
+    border-radius: 1000px;
+    background: #0000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+body.night nav ul li button {
+    border: 1px solid var(--text-color);
+}
+body.light nav ul li button::before {
+    content: url(../images/icons/moon-outline.svg);
+    height: 20px;
+    width: 20px;
+}
+body.night nav ul li button::before {
+    content: url(../images/icons/sunny-outline.svg);
+    height: 20px;
+    width: 20px;
+}
+.humberger {
+    position: relative;
+    height: 30px;
+    width: 30px;
+    display: none;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+.humberger::before {
+    content: "";
+    height: 2px;
+    width: 50%;
+    background: var(--text-color);
+    transition: 0.5s width, 0.5s rotate, 0.5s position;
+}
+.humberger::after {
+    content: "";
+    height: 2px;
+    width: 80%;
+    background: var(--text-color);
+    transition: 0.5s width, 0.5s rotate, 0.5s position;
+}
+.humberger .line {
+    height: 2px;
+    width: 100%;
+    background: var(--text-color);
+    margin: 4px 0;
+    transition: 0.5s opacity;
+}
+.humberger.active::before {
+    content: "";
+    width: 100%;
+    position: absolute;
+    rotate: 45deg;
+    transition: 0.5s width, 0.5s rotate, 0.5s position;
+}
+.humberger.active::after {
+    content: "";
+    width: 100%;
+    position: absolute;
+    rotate: -45deg;
+    transition: 0.5s width, 0.5s rotate, 0.5s position;
+}
+.humberger.active .line {
+    opacity: 0;
+    position: absolute;
+    margin: 0;
+    transition: 0.5s opacity;
+}
+/* Navigation bar */
+
+/* footer  */
+footer {
+    background: var(--card-background);
+    transition: 0.5s ease scale, 0.5s background;
+}
+footer .content {
+    min-height: 300px;
+    max-width: var(--max-width);
+    margin: 0 auto;
+    display: grid;
+    grid-template-rows: 80% 1fr;
+    padding: 50px 20px 40px 20px;
+}
+footer .content .upper {
+    display: grid;
+    grid-template-columns: 35% 30% 1fr;
+}
+footer .content .upper ul .logo {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 0 0 20px 0;
+}
+footer .content .upper ul .logo img {
+    height: 25px;
+    width: 25px;
+    margin: 0 10px 0 0;
+}
+footer .content .upper ul p {
+    font-size: 14px;
+    padding: 0 0 20px 0;
+}
+footer .content .upper ul li h4 {
+    height: 27px;
+    margin: 0 0 20px 0;
+}
+footer .content .upper ul li form {
+    position: relative;
+    width: 80%;
+}
+footer .content .upper ul li form input {
+    border: none;
+    padding: 0 20px;
+    height: 40px;
+    width: 100%;
+    border-radius: 10px;
+    color: black;
+}
+footer .content .upper ul li form button {
+    position: absolute;
+    right: -2px;
+    border: none;
+    background: var(--p-color);
+    padding: 0 15px;
+    height: 40px;
+    background: var(--accent-color);
+    color: white;
+    border-radius: 0 10px 10px 0;
+}
+footer .content .lower {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 20px;
+    border-top: 1px solid var(--p-color);
+}
+footer .content .lower div {
+    padding: 0 0 2.2px 0;
+    font-size: 20px;
+    transition: 0.5s ease scale, 0.5s color;
+}
+footer .content .lower span {
+    font-size: 12px;
+    padding: 0 0 0 5px;
+    transition: 0.5s ease scale, 0.5s color;
+}
+/* footer  */
+
+@media screen and (max-width: 1200px) {
+    nav {
+        padding: 0 40px;
+    }
+}
+@media screen and (max-width: 1060px) {
+    nav {
+        padding: 0 20px;
+    }
+    nav ul li a {
+        font-size: 14px;
+    }
+    /* nav  */
+
+    body.night,
+    body.light {
+        --max-width: 900px;
+        --p-size: 16px;
+    }
+    /* body  */
+
+    header {
+        padding: 25px 0;
+    }
+    header a {
+        padding: 8px 18px;
+        font-size: 14px;
+    }
+    /* header */
+}
